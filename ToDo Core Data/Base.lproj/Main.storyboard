@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uF6-gL-6wL">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Screen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeScreen" customModule="ToDo_Core_Data" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="elM-E6-3Ch">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GoalsCell" rowHeight="73" id="AaL-Rv-OLg" customClass="GoalsCell" customModule="ToDo_Core_Data" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="73"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AaL-Rv-OLg" id="Sbt-On-vHL">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="73"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9z-sE-xKV">
+                                                    <rect key="frame" x="70" y="21" width="303" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8w-sp-FXx">
+                                                    <rect key="frame" x="70" y="46.333333333333336" width="323" height="21.000000000000007"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Kue-or-qhK">
+                                                    <rect key="frame" x="20" y="12" width="30" height="49.666666666666671"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="DAN-XO-z5n"/>
+                                                        <constraint firstAttribute="height" constant="51" id="lrs-7k-SLO"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="D8w-sp-FXx" firstAttribute="leading" secondItem="Kue-or-qhK" secondAttribute="trailing" constant="20" id="6NX-bJ-S7A"/>
+                                                <constraint firstItem="Kue-or-qhK" firstAttribute="top" secondItem="Sbt-On-vHL" secondAttribute="topMargin" id="EKP-07-TLf"/>
+                                                <constraint firstItem="A9z-sE-xKV" firstAttribute="leading" secondItem="Kue-or-qhK" secondAttribute="trailing" constant="20" id="HdZ-8p-3aH"/>
+                                                <constraint firstItem="Kue-or-qhK" firstAttribute="bottom" secondItem="Sbt-On-vHL" secondAttribute="bottomMargin" id="NWt-12-ECo"/>
+                                                <constraint firstItem="D8w-sp-FXx" firstAttribute="top" secondItem="A9z-sE-xKV" secondAttribute="bottom" constant="5" id="OaG-oG-9t5"/>
+                                                <constraint firstItem="Kue-or-qhK" firstAttribute="leading" secondItem="Sbt-On-vHL" secondAttribute="leadingMargin" id="PY5-xM-4S5"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="A9z-sE-xKV" secondAttribute="trailing" id="Z1t-Vb-kGb"/>
+                                                <constraint firstItem="A9z-sE-xKV" firstAttribute="top" secondItem="Sbt-On-vHL" secondAttribute="topMargin" constant="10" id="lej-Fg-bom"/>
+                                                <constraint firstAttribute="trailing" secondItem="D8w-sp-FXx" secondAttribute="trailing" id="oq9-ZD-tXc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkBoxImageView" destination="Kue-or-qhK" id="oiY-o7-I3K"/>
+                                            <outlet property="goalsLabel" destination="A9z-sE-xKV" id="bJ6-49-Tc0"/>
+                                            <outlet property="statusLabel" destination="D8w-sp-FXx" id="DUe-2U-xs9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="EL8-gy-Ny2"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2s2-Qm-6K1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="T2S-3y-P6f">
+                        <leftBarButtonItems>
+                            <barButtonItem image="ellipsis" catalog="system" id="wDu-hj-9r5">
+                                <connections>
+                                    <action selector="moreButtonTapped:" destination="BYZ-38-t0r" id="xDN-6e-Nrd"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Filter" image="line.3.horizontal.decrease.circle" catalog="system" id="EPo-6E-Szv">
+                                <connections>
+                                    <action selector="filterButtonAction:" destination="BYZ-38-t0r" id="yAn-Rw-qga"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Add" image="plus.circle" catalog="system" id="BIC-M6-Ny4">
+                            <color key="tintColor" systemColor="systemBlueColor"/>
+                            <connections>
+                                <action selector="addButtonAction:" destination="BYZ-38-t0r" id="gju-Pe-Bb8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="todoTableView" destination="elM-E6-3Ch" id="9ci-Qd-UQW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941.22137404580144" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="F5g-Op-bDD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uF6-gL-6wL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pP5-kg-BoP">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ET7-bF-oOb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZs-oS-wyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14.503816793893129" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circle" catalog="system" width="128" height="123"/>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>
+        <image name="plus.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
